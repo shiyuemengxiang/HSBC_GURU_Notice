@@ -2,8 +2,8 @@ name: Monitor HSBC Travel Guru
 
 on:
   schedule:
-    # 每 30 分钟运行一次 (UTC 时间)
-    - cron: '*/30 * * * *'
+    # 避开整点与半点高峰（改为每小时第 7 分与第 37 分运行）
+    - cron: '7,37 * * * *'
   workflow_dispatch:
 
 jobs:
